@@ -21,7 +21,7 @@ function Ajax(method, path, data, headers) {
 const get = (path, data) => {
     let url = path;
     if (data && Object.keys(data).length) {
-        url = `${path}?${qs.stringify(data)}`
+        url = `${path}?=${qs.stringify(data)}`
     }
     return Ajax('get', url, data, 'application/x-www-form-urlencoded')
 }
